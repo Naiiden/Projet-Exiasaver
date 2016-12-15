@@ -16,7 +16,7 @@ int delay = 10;
 bytes [CHIFFRE][BITS]
 deuxPoints [BITS]
 */
-char bytes[9][28];
+char bytes[10][28];
 char deuxPoints[28];
 
 
@@ -25,8 +25,8 @@ int main(int argc, char *argv[]) {
 	
 	
 	//On 
-	memset(bytes,'\0',1);
-	memset(deuxPoints,'\0',1);
+	//memset(bytes,'\0',1);
+	//memset(deuxPoints,'\0',1);
 	
 	//Initialisation des variables utilisées
 	int ligne = 1;
