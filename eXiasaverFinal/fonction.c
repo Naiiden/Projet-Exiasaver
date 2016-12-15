@@ -5,6 +5,8 @@
 #include <string.h>
 #include <sys/types.h>
 
+/**
+**/
 int choixMode()
 {
     int mode;
@@ -12,7 +14,8 @@ int choixMode()
     return mode; // Renvoie le nombre aleatoire obtenu.
 }
 
-
+/**
+**/
 int choisirImage()
 {
     int nombre = 0;
@@ -21,6 +24,9 @@ int choisirImage()
     return nombre;
 }
 
+/**
+@param int mode : mode choisis
+**/
 void sauvegardeInfos (int mode)
 {
     const char* NomMois[] = {"01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"};
@@ -39,23 +45,24 @@ void sauvegardeInfos (int mode)
     fclose(ft);
 }
 
-
+/**
+**/
 void afficherInfo()
 {
-// cette fonction affiche le fichier statistique.
     system("cat stat.txt");
 }
 
+/**
+**/
 void afficherfinInfo()
 {
-// cette fonction affiche les derniere ligne du fichier statistique.
     system("tail stat.txt");
 }
 
+/**
+**/
 void trierinfo()
 {
-
-// cette fonction affiche combien de fois tous les mode ont ete lances.
     int modestatique=0, modedynamique=0, modeinteractif=0;
     char modelu;
     FILE* ft=NULL;
@@ -84,6 +91,8 @@ void trierinfo()
     fclose(ft);
 }
 
+/**
+**/
 void menustat()
 {
     char menu='0';
